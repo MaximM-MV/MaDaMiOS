@@ -19,5 +19,5 @@
  
  BinToIso.sh - делает из бинарного файла в загрузочный образ. Вывод в папку OSFiles.
  
- multiboottest.sh - проверяет GRUB в загрзочном образе.
+ multiboottest.sh - проверяет GRUB в бинарном файле.
 
