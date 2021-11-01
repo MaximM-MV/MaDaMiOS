@@ -1,9 +1,12 @@
+I686_TOOLS="Tools/cross/`uname -m`/bin"
 mkdir -p temp
-sudo chmod 777 Source
-sudo chmod 777 Source/Asm/
 sudo chmod 777 Source/Asm/*.asm
 sudo chmod 777 Source/C/*.c
 sudo chmod 777 Source/C/*.h
+if [[ :$PATH: != *:$I686_TOOLS:* ]]; then
+export PATH=$I686_TOOLS:$PATH
+fi
+
 if sudo nasm -felf32 Source/Asm/*.asm -o temp/boot.o; then
   echo Загрузчик готов!
   if i686-elf-gcc -c Source/C/*.c -o temp/kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra; then

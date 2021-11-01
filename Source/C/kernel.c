@@ -357,7 +357,7 @@ void kernel_main(){
 			}
 			if(buff_command[0] == 'i' && buff_command[1] == 'n' && buff_command[2] == 'f' && buff_command[3] == 'o'){
 				terminal_newline();
-				terminal_writestring("MaDaMiOS by MaDaMi 0---0");
+				terminal_writestring("MaDaMiOS");
 			}
 			else if(buff_command[0] == 'o' && buff_command[1] == 'f' && buff_command[2] == 'f'){
 				inb(0x16);
